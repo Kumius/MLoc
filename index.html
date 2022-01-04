@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PP9353L');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Mobicom 2022 | Practical Indoor Localization for Malls</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link href="css/mobicom22.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9353L"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #7a0019;">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top" id="goto-page-top">
+      <!-- <img src="images/M.png" alt="University of XXX"> -->
+      &nbsp;<b>M<span
+        style="color: #ffcc33;">Loc</span></b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="vw_abstract" href="#abstract">Abstract</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="vw_expr" href="#system">System</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="vw_paper" href="#publication">Paper</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="vw_talk" href="#publication">Talk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="vw_slides" href="#publication">Slides</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="vw_dataset" href="#resource">Dataset</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="vw_supporters" href="#supporters">Supporters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="vw_email_us" href="mailto:xxx"><i
+              class="fas fa-fw fa-envelope"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-primary text-white bg-white">
+  <div class="container text-center">
+    <h2 style="color: black">Practical Indoor Localization for Malls</h2>
+    <p style="color: #000000">
+      <br>
+      Paper #48
+    </p>
+  </div>
+</header>
+
+<section id="abstract" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 mx-auto">
+        <h2>Abstract</h2>
+        <p align="justify"><br>
+          We report our experiences of developing, deploying, and
+          evaluating MLoc, a smartphone-based indoor localization
+          system for malls. MLoc uses Bluetooth Low Energy RSSI
+          and geomagnetic field strength as fingerprints. We develop
+          efficient approaches for large-scale, outsourced training data
+          collection. We also design robust online algorithms for localizing
+          and tracking users’ positions in complex malls. Since
+          2018, MLoc has been deployed in 7 cities in China, and used
+          by more than 1 million customers. We conduct extensive evaluations
+          at 35 malls in 7 cities, covering 152K m^2 mall areas
+          with a total walking distance of 215 km (1,100 km training
+          data). MLoc yields a median location tracking error of 2.4m.
+          We further characterize the behaviors of MLoc’s customers
+          (472K users visiting 12 malls), and demonstrate that MLoc is
+          a promising marketing platform through a promotion event.
+        </p>
+      </div>
+      <div class="col-lg-3 mx-auto">
+        <img src="images/localization.png" alt="Localization">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="system">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <h2>System Design</h2>
+        <p align="justify"><br>
+          MLoc consists of two phases: offline training,
+          where (fingerprint, location) pairs are collected to build a
+          localization model, and online inference, where a user’ smartphone
+          collects fingerprints, uploads them to the edge, and
+          obtains the location and/or navigation guidance in real time.
+        </p>
+      </div>
+      <p>&nbsp;</p>
+      <div class="col-lg-3 mx-auto text-center">
+        <img src="images/atrium-area.png"
+             alt="We deploy beacons on the ceiling">
+        <p>Beacon deployment</p>
+      </div>
+      <div class="col-lg-3 mx-auto text-center">
+        <img src="images/collection.png"
+             alt="We walk between landmarks to collect the fingerprints of the building">
+        <p>Fingerprint collecting</p>
+      </div>
+      <div class="col-lg-4 mx-auto text-center">
+        <img src="images/corner-case.png"
+             alt="Corner cases of localization (narrow corridor, and dead end)">
+        <p>Corner cases of localization (narrow corridor, and dead end)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publication" class="bg-light">
+  <div class="container">
+    <div class='row'>
+      <div class="col-lg-12 mx-auto">
+        <h2>Paper | Talk | Slides</h2>
+        <p><br>
+<!--           <a id="link_paper_pdf" href="downloads/xxx.pdf" target="_blank">Paper
+            PDF</a><br/><br/>
+          <a id="link_download_talk" href="downloads/xxx.webm" target="_blank">Technical
+            Talk</a><br><br>
+          <a id="link_download_slides" href="downloads/slides.zip" target="_blank">Presentation Slides</a><br><br> -->
+          <a data-toggle="collapse" href="#link_collapseBibtex" role="button" aria-expanded="false"
+             aria-controls="link_collapseBibtex">
+            Cite Us
+          </a>
+          <br/>
+        </p>
+        <div class="collapse" id="link_collapseBibtex">
+          <div class="card card-body">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-copy js-tooltip js-copy" data-toggle="tooltip"
+                      data-placement="bottom" title="Copy to clipboard" id="link_copybibtex1">
+                <!-- icon from google's material design library -->
+                Copy to Clipboard
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     version="1.1" width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                      d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"/>
+                </svg>
+              </button>
+            </div>
+            <pre class="my-auto" id="bibtex-content">
+            current unavailable...
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resource">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <h2>MLoc Dataset</h2>
+        <p align="justify"><br>
+          MLoc has been deployed since
+          9/2018 with improvements being made over the past three
+          years. We have conducted principled, large-scale evaluations
+          by hiring trained testers.
+          We release the data used in the paper, most of which is collected in the past two years.
+          MLoc adopts an outsourcing approach (i.e., hiring paid human workers) for
+          collecting BLE/GMF fingerprints and the ground truth location
+          data. The details of the data format
+          <a id="data-format-md" href="downloads/data-format.md" target="_blank">can be found here</a>, and an example of the trace file
+          <a id="trace-example" href="downloads/trace-file-example.txt" target="_blank">is show here</a>.
+        </p>
+        <p><br></p>
+        <div class="container row mx-auto">
+          <div class="col-lg-3 mx-auto text-center">
+            <img src="images/ipal-bias-by-algo.jpg" alt="Comparing 5G and 4G performance (TCP concurrency)">
+          </div>
+          <div class="col-lg-6 mx-auto text-center">
+            <img src="images/ipal-bias-by-time.jpg"
+                 alt="5G signals getting blocked due to human body. Another example shows 5G establishing reflective path due to obstruction.">
+          </div>
+          <div class="col-lg-3 mx-auto text-center">
+            <img src="images/ipal-bias-by-interval.jpg" alt="Walking loop tests">
+          </div>
+          <p><br><br>
+          </p>
+          <div class="row container mx-auto">
+            <div class="col-lg-4 mx-auto text-center">
+              <p><a class="btn btn-dataset" href="downloads/dataset.zip" id="link_download_dataset" role="button">Download
+                (MLoc) Dataset</a></p>
+            </div>
+          </div>
+          <div class="row container mx-auto">
+            <div class="mx-auto text-center">
+<!--               <p align="justify">Need more data? Check out <a id="link_lumos5g"
+                                                              href="https://xxx.edu"
+                                                              target="_blank">MLoc</a> dataset or email us at <a
+                  href="mailto:xxx@umn.edu" id="link_email_us" target="_blank">xxx@yyy.edu</a></p> -->
+              <p align="justify">We will release all our data (40GB) if this paper is accepted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="supporters">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <h2>Supporters</h2>
+        <p><br>
+          This project was supported in part by XXX.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="py-3" style="background-color: #7a0019;">
+  <div class="container">
+    <!-- <p class="m-0 text-center text-white">Copyright &copy; XXX</p> -->
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="js/scrolling-nav.js"></script>
+<script src="js/copy-clipboard.js"></script>
+
+</body>
+
+</html>

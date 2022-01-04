@@ -1,0 +1,33 @@
+.btn-dataset {
+    color: #7a0019;
+    background-color: #ffcc33;
+    border-color: #ffcc33;
+}
+
+.btn-dataset:hover {
+    color: #ffcc33;
+    background-color: #7a0019;
+    border-color: #7a0019;
+}
+
+.btn-dataset:focus, .btn-dataset.focus {
+    box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+}
+
+.btn-dataset.disabled, .btn-dataset:disabled {
+    color: #7a0019;
+    background-color: #ffcc33;
+    border-color: #ffcc33;
+}
+
+.btn-dataset:not(:disabled):not(.disabled):active, .btn-dataset:not(:disabled):not(.disabled).active,
+.show > .btn-dataset.dropdown-toggle {
+    color: #7a0019;
+    background-color: #ffb71e;
+    border-color: #ffb71e;
+}
+
+.btn-dataset:not(:disabled):not(.disabled):active:focus, .btn-dataset:not(:disabled):not(.disabled).active:focus,
+.show > .btn-dataset.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+}
