@@ -40,7 +40,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #7a0019;">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#page-top" id="goto-page-top">
-      <!-- <img src="images/M.png" alt="University of XXX"> -->
+      <img src="images/M.png" alt="University of XXX">
       &nbsp;<b>M<span
         style="color: #ffcc33;">Loc</span></b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -71,7 +71,7 @@
           <a class="nav-link js-scroll-trigger" id="vw_supporters" href="#supporters">Supporters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" id="vw_email_us" href="mailto:xxx"><i
+          <a class="nav-link js-scroll-trigger" id="vw_email_us" href="mailto:hu000379@umn.edu"><i
               class="fas fa-fw fa-envelope"></i></a>
         </li>
       </ul>
@@ -81,10 +81,20 @@
 
 <header class="bg-primary text-white bg-white">
   <div class="container text-center">
-    <h2 style="color: black">Practical Indoor Localization for Malls</h2>
+    <h2 style="color: black">Experience: Practical Indoor Localization for Malls</h2>
     <p style="color: #000000">
       <br>
-      Paper #48
+      <a href="https://scholar.google.com/citations?user=kEHvN3cAAAAJ" id="link_yuming" target="_blank">Yuming Hu</a>,
+      <a href="http://fengqian.org" id="link_feng" target="_blank">Feng Qian</a>,
+      <a href="https://www.cityu.edu.hk/stfprofile/zhimeng.htm" id="link_zhimeng" target="_blank">Zhimeng Yin</a>,
+      <a href="http://www.greenorbs.org/people/lzh/" id="link_zhenhua" target="_blank">Zhenhua Li</a>,
+      Zhe Ji,
+      Qiang Xu,
+      Yeqiang Han,
+      Wei Jiang
+      <br><br>
+      <em>Department of Computer Science &amp; Engineering</em><br>
+      <strong>University of Minnesota</strong>
     </p>
   </div>
 </header>
@@ -184,7 +194,21 @@
               </button>
             </div>
             <pre class="my-auto" id="bibtex-content">
-            current unavailable...
+            @inproceedings{10.1145/3366423.3380169,
+              author = {Yuming Hu, Feng Qian, Zhimeng Yin, Zhenhua Li, Zhe Ji, Yeqiang Han, Qiang Xu, Wei Jiang},
+              title = {Experience: Practical Indoor Localization for Malls},
+              year = {2022},
+              isbn = {781450391818},
+              publisher = {Association for Computing Machinery},
+              address = {New York, NY, USA},
+              url = {https://doi.org/10.1145/3495243.3517021},
+              doi = {10.1145/3495243.3517021},
+              booktitle = {The 28th Annual International Conference On Mobile Computing And Networking (ACM MobiCom '22)},
+              pages = {0-12},
+              numpages = {12},
+              location = {Sydney, NSW, Australia},
+              series = {Mobicom '22}
+            }
             </pre>
           </div>
         </div>
@@ -208,26 +232,26 @@
           collecting BLE/GMF fingerprints and the ground truth location
           data. The details of the data format
           <a id="data-format-md" href="downloads/data-format.md" target="_blank">can be found here</a>, and an example of the trace file
-          <a id="trace-example" href="downloads/trace-file-example.txt" target="_blank">is show here</a>.
+          <a id="trace-example" href="downloads/trace-file-example.txt" target="_blank">is shown here</a>.
         </p>
         <p><br></p>
         <div class="container row mx-auto">
           <div class="col-lg-3 mx-auto text-center">
-            <img src="images/ipal-bias-by-algo.jpg" alt="Comparing 5G and 4G performance (TCP concurrency)">
+            <img src="images/ipal-bias-by-algo.png" alt="Localization errors under different algorithms.">
           </div>
           <div class="col-lg-6 mx-auto text-center">
-            <img src="images/ipal-bias-by-time.jpg"
-                 alt="5G signals getting blocked due to human body. Another example shows 5G establishing reflective path due to obstruction.">
+            <img src="images/ipal-bias-by-time.png"
+                 alt="Localization errors under different time.">
           </div>
           <div class="col-lg-3 mx-auto text-center">
-            <img src="images/ipal-bias-by-interval.jpg" alt="Walking loop tests">
+            <img src="images/ipal-bias-by-interval.png" alt="Localization errors under different BLE broadcast interval.">
           </div>
           <p><br><br>
           </p>
           <div class="row container mx-auto">
             <div class="col-lg-4 mx-auto text-center">
-              <p><a class="btn btn-dataset" href="downloads/dataset.zip" id="link_download_dataset" role="button">Download
-                (MLoc) Dataset</a></p>
+              <p><a class="btn btn-dataset" href="downloads/sample.zip" id="link_download_sample" role="button">Download
+                (MLoc) Sample</a></p>
             </div>
           </div>
           <div class="row container mx-auto">
@@ -236,7 +260,7 @@
                                                               href="https://xxx.edu"
                                                               target="_blank">MLoc</a> dataset or email us at <a
                   href="mailto:xxx@umn.edu" id="link_email_us" target="_blank">xxx@yyy.edu</a></p> -->
-              <p align="justify">We will release all our data (40GB) if this paper is accepted.</p>
+              <p align="justify"> <a href="https://drive.google.com/uc?export=download&id=1ZXdk5dDSPFOVphtES4cS2olB3bPORRnV" id="link_gdrive" target="_blank">All 40GB dataset (8GB compressed).</a></p>
             </div>
           </div>
         </div>
@@ -251,7 +275,7 @@
       <div class="col-lg-12 mx-auto">
         <h2>Supporters</h2>
         <p><br>
-          This project was supported in part by XXX.
+          This project was supported in part by NSF Award 1915122 and 2128489. Zhimeng Yin’s research was supported by City University of Hong Kong 9610491 and NSF China 62102332.
         </p>
       </div>
     </div>
@@ -262,7 +286,7 @@
 <!-- Footer -->
 <footer class="py-3" style="background-color: #7a0019;">
   <div class="container">
-    <!-- <p class="m-0 text-center text-white">Copyright &copy; XXX</p> -->
+    <p class="m-0 text-center text-white">Copyright &copy; University of Minnesota 2020</p>
   </div>
   <!-- /.container -->
 </footer>
